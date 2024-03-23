@@ -1,5 +1,6 @@
 import '@/app/ui/global.css'
 import { inter } from './ui/fonts';
+import { Metadata } from 'next';
 
 export default function RootLayout({
   children,
@@ -14,3 +15,12 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: {
+    template: `%s | Fei's Dashboard`,
+    default: `Fei's Dashboard`
+  },
+  description: 'Next.js course',
+  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+};
